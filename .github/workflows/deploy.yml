@@ -6,8 +6,8 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  BACKEND_IMAGE: ghcr.io/${{ github.repository_owner }}/shopping-backend
-  FRONTEND_IMAGE: ghcr.io/${{ github.repository_owner }}/shopping-frontend
+  BACKEND_IMAGE: ghcr.io/muhammadalishuhratjonov/shopping-backend
+  FRONTEND_IMAGE: ghcr.io/muhammadalishuhratjonov/shopping-frontend
 
 jobs:
   build-backend:
@@ -87,5 +87,5 @@ jobs:
             cd ~/shopping
             docker compose -f docker-compose.prod.yml pull
             docker compose -f docker-compose.prod.yml up -d
-            docker compose -f docker-compose.prod.yml exec -T backend npm run migration:run
+            docker compose -f docker-compose.prod.yml run --rm backend npm run migration:run
             docker image prune -f
