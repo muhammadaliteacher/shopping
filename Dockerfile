@@ -2,7 +2,7 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm ci
+RUN npm install
 
 COPY . .
 RUN npm run build
@@ -15,7 +15,7 @@ ENV NODE_ENV=production
 RUN apk add --no-cache wget
 
 COPY package*.json ./
-RUN npm ci --omit=dev && npm cache clean --force
+RUN npm install --omit=dev && npm cache clean --force
 
 # Kompilyatsiya qilingan kod
 COPY --from=builder /app/dist ./dist
