@@ -16,7 +16,7 @@ export interface PaginatedProducts {
   total: number;
   page: number;
   limit: number;
-  totalPages: number;
+  totalPages: number; 
 }
 
 @Injectable()
