@@ -6,8 +6,8 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  BACKEND_IMAGE: ghcr.io/muhammadalishuhratjonov/shopping-backend
-  FRONTEND_IMAGE: ghcr.io/muhammadalishuhratjonov/shopping-frontend
+  BACKEND_IMAGE: ghcr.io/muhammadaliteacher/shopping-backend
+  FRONTEND_IMAGE: ghcr.io/muhammadaliteacher/shopping-frontend
 
 jobs:
   build-backend:
