@@ -15,7 +15,7 @@ export interface PaginatedProducts {
   items: Product[];
   total: number; 
   page: number;
-  limit: number;
+  limit: number; 
   totalPages: number; 
 }
 
