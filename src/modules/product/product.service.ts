@@ -13,7 +13,7 @@ import { CategoryService } from '../category/category.service';
 
 export interface PaginatedProducts {
   items: Product[];
-  total: number;
+  total: number; 
   page: number;
   limit: number;
   totalPages: number; 
